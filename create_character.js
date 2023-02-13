@@ -9,7 +9,7 @@ eden.loginApi(
 
 // all the settings here
 
-const prompt = "What is the meaning of life? I think it can only be described like this:"
+const prompt = "What is the meaning of life? I think it is"
 
 const face_url_options = [
   'https://cdn.discordapp.com/attachments/658622951616282625/1074541703958102096/frame_0.0000000000000000.jpg',
