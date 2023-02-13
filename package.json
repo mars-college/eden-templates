@@ -1,0 +1,23 @@
+{
+  "name": "eden-templates",
+  "version": "1.0.0",
+  "description": "Eden templates for Martians",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mars-college/eden-templates.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mars-college/eden-templates/issues"
+  },
+  "homepage": "https://github.com/mars-college/eden-templates#readme",
+  "dependencies": {
+    "eden-sdk": "^0.2.3"
+  }
+}
