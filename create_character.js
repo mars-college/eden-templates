@@ -33,12 +33,15 @@ let completion = await fetch(result1.uri).then(response => response.text());
 
 // 2) speak the completion with a TTS model on a cloned voice
 const voice_file_urls = await eden.uploadFiles(voice_cloning_files);
+console.log(voice_file_urls)
 let result2 = await eden.create("tts", {
   text: completion,
   voice: "clone",
   voice_file_urls: voice_file_urls,
-  preset: "standard",
+  preset: "ultra_fast",
 });
+
+console.log("DONE!!")
 console.log(result2);
 
 // 3) generate a lip-synced video from the speech and face
