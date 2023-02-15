@@ -3,13 +3,13 @@ import {EdenClient} from "eden-sdk";
 const eden = new EdenClient();
 
 eden.loginApi(
-  "admin",
-  "admin"
+  "f321be5a8f7887c7057fa45248a71e867917aaec",
+  "bda594362f4a2f19b697ed74c4b3f26ac4685e3f"
 );
 
 // all the settings here
 
-const prompt = "What is the meaning of life? I think it is"
+const prompt = "The dominant sequence transduction models are based on complex recurrent or convolutional neural networks that include an encoder and a decoder. The best performing models also connect the encoder and decoder through an attention mechanism. We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with"
 
 const face_url_options = [
   'https://cdn.discordapp.com/attachments/658622951616282625/1074541703958102096/frame_0.0000000000000000.jpg',
@@ -19,9 +19,10 @@ const face_url_options = [
 ]
 
 const voice_cloning_files = [
-  "assets/voice1.wav", 
-  "assets/voice2.wav", 
-  "assets/voice3.wav"
+  "assets/gene/gene1.wav",
+  "assets/gene/gene2.wav",
+  "assets/gene/gene3.wav",
+  "assets/gene/gene4.wav"
 ]
 
 // 1) generate the text with a GPT-3 completion

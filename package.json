@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/mars-college/eden-templates#readme",
   "dependencies": {
-    "eden-sdk": "^0.2.9"
+    "eden-sdk": "^0.2.12"
   }
 }
