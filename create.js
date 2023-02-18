@@ -1,12 +1,9 @@
 import {EdenClient} from "eden-sdk";
 
 const eden = new EdenClient();
-
 eden.loginApi(
-  "f321be5a8f7887c7057fa45248a71e867917aaec",
-  "bda594362f4a2f19b697ed74c4b3f26ac4685e3f"
-);
-
+  "afb9da36e8b2e9143afd6479b0c43b033bf2f17fa4bf9a48",	"2c6cb1042e90fed840a5f3a4d7b88ba233a8be6a7e9e5817"
+)
 let manna = await eden.getManna();
 console.log(manna);
 
@@ -26,7 +23,7 @@ let config2 = {
 }
 
 //let result = await eden.create("create", config);
-let result = await eden.create("interpolate", config2);
+let result = await eden.create("interpolate", config);
 
 console.log(result);
 
