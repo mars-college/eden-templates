@@ -16,6 +16,7 @@ def concatenate_videos(summary_file, output_file):
     for url in urls:
         filename = url.split("/")[-1]
         filename = os.path.join("video", filename)
+        print("get", url)
         response = requests.get(url)
         with open(filename, 'wb') as f:
             f.write(response.content)
@@ -39,6 +40,10 @@ def concatenate_videos(summary_file, output_file):
     final_clip = concatenate_videoclips(composite_clips)
     final_clip.write_videofile(output_file)
 
+    # ffmpeg
+    cmd = 'ffmpeg -i %s -c:v copy -c:a aac -b:a 128k %s' % (output_file, output_file.replace(".mp4", "_.mp4"))
+    os.system(cmd)
+
     return output_file
 
 
@@ -47,4 +52,6 @@ for file in files:
     summary_filename = os.path.join("output", file)
     clip_filename = summary_filename.replace(".txt", ".mp4")
     if not os.path.exists(clip_filename):
+        print(summary_filename, clip_filename)
         concatenate_videos(summary_filename, clip_filename)
+

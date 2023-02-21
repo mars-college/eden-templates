@@ -6,13 +6,13 @@ const characters = {
     audioFiles: getAllFiles('assets/audio/czar', '.wav'),
     image: 'assets/images/czar/1.jpg',
     lora: getAllFiles('assets/lora/czar', '.jpg'),
-    description: 'a healer who is interested in water distribution systems. She is a member of the Water Council of Bombay Beach.'
+    description: 'a healer who is interested in water, botany, and ecological restoration.'
   },
   'Delic': {
     audioFiles: getAllFiles('assets/audio/delic', '.wav'),
     image: 'assets/images/delic/1.jpg',
     lora: getAllFiles('assets/lora/delic', '.jpg'),
-    description: 'a former warrior who has returned home and taken an interest in the occult, and electric unicycling.'
+    description: 'a carpenter who rides an electric unicycle and practices AI prompt engineering.'
   },
   'Marzipan': {
     audioFiles: getAllFiles('assets/audio/marzipan', '.wav'),
@@ -36,7 +36,19 @@ const characters = {
     audioFiles: getAllFiles('assets/audio/gene', '.wav'),
     image: 'assets/images/gene/1.jpg',
     lora: getAllFiles('assets/lora/gene', '.jpg'),
-    description: 'a professional electric unicycling hockey player who moonlights as a computer artist.'
+    description: 'a computer engineer and inventor who is building a simulation engine for the collective imagination.'
+  },
+  'Xander': {
+    audioFiles: getAllFiles('assets/audio/xander', '.wav'),
+    image: 'assets/images/xander/1.jpg',
+    lora: getAllFiles('assets/lora/xander', '.jpg'),
+    description: 'a rock climber turned AI researcher and biotech engineer.'
+  },
+  'Vincent': {
+    audioFiles: getAllFiles('assets/audio/vincent', '.wav'),
+    image: 'assets/images/vincent/1.jpg',
+    lora: getAllFiles('assets/lora/vincent', '.jpg'),
+    description: 'a media artist and detective investigating an alleged plot to tamper with the intelligence simulator.'
   },
 }
 

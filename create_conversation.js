@@ -25,11 +25,12 @@ const topics = [
   "the future of the internet",
   "how to make a living as an artist",
   "the beauty of mathematics and physics",
-  "Keynesian and Austrian economics, and capitalism"
+  "Keynesian and Austrian economics",
+  "the differences among the various flavors of Buddhism",
 ]
 
-const allCharacters = ['Czar', 'Delic', 'Marzipan', 'Vanessa', 'Freeman', 'Gene'];
-const selectedCharacters = getRandomSample(allCharacters, 3);
+const allCharacters = ['Czar', 'Delic', 'Marzipan', 'Vanessa', 'Freeman', 'Gene', 'Xander', 'Vincent'];
+const selectedCharacters = getRandomSample(allCharacters, 4);
 const selectedTopic = getRandomSample(topics, 1)[0];
 
 console.log(selectedTopic, selectedCharacters);
@@ -42,12 +43,12 @@ for (const c of selectedCharacters) {
 }
 
 const prompt = `
-I would like you to create a chat conversation between the following three characters.
+I would like you to create a chat conversation between the following four characters.
 
 ${characterIntro}
 The topic of the conversation is ${selectedTopic}.
 
-Write a conversation between these four characters that is at least 500 words long. It should be formatted as a chat, one line for each message. No one should speak except these three characters.
+Write a conversation between these four characters that is at least 500 words long. It should be formatted as a chat, one line for each message. No one should speak except these four characters.
 `;
 
 console.log(prompt);

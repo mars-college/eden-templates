@@ -36,6 +36,15 @@
   "resolved" "https://registry.npmjs.org/dotenv/-/dotenv-16.0.3.tgz"
   "version" "16.0.3"
 
+"eden-sdk@file:../eden-sdk":
+  "resolved" "file:../eden-sdk"
+  "version" "0.2.13"
+  dependencies:
+    "axios" "^1.2.4"
+    "dotenv" "^16.0.3"
+    "fs" "^0.0.1-security"
+    "log-update" "^5.0.1"
+
 "fetch-blob@^3.1.2", "fetch-blob@^3.1.4":
   "integrity" "sha512-7yAQpD2UMJzLi1Dqv7qFYnPbaPx7ZfFK6PiIxQ4PfkGPyNyl2Ugx+a/umUonmKqjhM4DnfbMvdX6otXq83soQQ=="
   "resolved" "https://registry.npmjs.org/fetch-blob/-/fetch-blob-3.2.0.tgz"
