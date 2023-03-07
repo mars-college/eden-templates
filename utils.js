@@ -31,8 +31,22 @@ function parseChat(chatText) {
   return messages;
 }
 
+function parseLines(text) {
+  const textLines = text.trim().split("\n");
+  let lines = [];
+  for (let line of textLines) {
+    line = line.trim();
+    line = line.replace(/^\d+\.\s*/, '');
+    if (line.length > 0) {
+      lines.push(line);
+    }
+  }
+  return lines;
+}
+
 export {
   getAllFiles,
   getRandomSample,
-  parseChat
+  parseChat,
+  parseLines
 }
