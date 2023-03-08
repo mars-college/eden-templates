@@ -5,8 +5,7 @@ const eden = new EdenClient();
 
 
 async function generateMonologue(character_description) {
-  console.log(character_description);
-
+  
   // 2) Generate character face from description
 
   let init_image_urls = await eden.uploadFiles([
@@ -25,7 +24,6 @@ async function generateMonologue(character_description) {
   let face_result = await eden.create("create", face_config);
 
   console.log(face_result);
-
 
   // 3) Generate character monologue
 
@@ -46,7 +44,7 @@ async function generateMonologue(character_description) {
 
   Generate a monologue for this character.`
 
-  let character_monologue_result = await eden.create("complete", {
+  const character_monologue_result = await eden.create("complete", {
     prompt: monologue_prompt,
     temperature: 0.9,
     max_tokens: 250,
@@ -58,7 +56,6 @@ async function generateMonologue(character_description) {
   const character_monologue = character_monologue_result.task.output.result.trim();
 
   console.log(character_monologue);
-
 
   // 4) Generate TTS from monologue
 
@@ -85,6 +82,7 @@ async function generateMonologue(character_description) {
     randomVoice = men[Math.floor(Math.random() * men.length)];
   }
 
+  console.log("THE VOICE IS: " + randomVoice)
   let tts_config = {
     text: character_monologue,
     voice: randomVoice
@@ -105,8 +103,6 @@ async function generateMonologue(character_description) {
 
   return w2l_result.uri;
 }
-
-
 
 // 1) Generate character descriptions
 
@@ -133,7 +129,6 @@ let character_result = await eden.create("complete", {
 });
 
 let character_descriptions = parseLines(character_result.task.output.result);
-character_descriptions = [character_descriptions[0]];
 
 const promises = character_descriptions.map(async (character_description) => {
   const result = await generateMonologue(character_description);
