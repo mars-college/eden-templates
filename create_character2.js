@@ -3,6 +3,12 @@ import {parseLines} from './utils.js';
 
 const eden = new EdenClient();
 
+let init_image_urls = await eden.uploadFiles([
+  "assets/misc/standing1.jpg", 
+  "assets/misc/pose1.jpg", 
+  "assets/misc/face1.jpg"
+])
+console.log(init_image_urls)
 
 async function generateMonologue(character_description) {
   
@@ -13,6 +19,7 @@ async function generateMonologue(character_description) {
     "assets/misc/pose1.jpg", 
     "assets/misc/face1.jpg"
   ])
+  console.log(init_image_urls)
   let init_image = init_image_urls[1]; //[Math.floor(Math.random() * init_image_urls.length)];
   let face_config = {
     text_input: character_description,
@@ -119,6 +126,8 @@ A portrait of a traditional indigenous elder, with weathered skin and wrinkles, 
 I want you to generate a list of 2-3 such text prompts.
 `
 
+
+
 let character_result = await eden.create("complete", {
   prompt: character_prompt,
   temperature: 0.9,
@@ -128,6 +137,8 @@ let character_result = await eden.create("complete", {
   presence_penalty: 0.1
 });
 
+
+console.log(character_result);
 let character_descriptions = parseLines(character_result.task.output.result);
 
 const promises = character_descriptions.map(async (character_description) => {

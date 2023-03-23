@@ -21,16 +21,15 @@ let completion = "I am your guardian angel"
 
 // 2) speak the completion with a TTS model on a cloned voice
 const voice_cloning_files = [
-  "assets/audio/freeman/1.wav",
-  "assets/audio/freeman/2.wav",
-  "assets/audio/freeman/3.wav",
-  "assets/audio/freeman/4.wav",
-  "assets/audio/freeman/5.wav",
-  "assets/audio/freeman/6.wav"
+  "assets/audio/jmill/1.wav",
+  "assets/audio/jmill/2.wav",
+  "assets/audio/jmill/3.wav",
+  "assets/audio/jmill/4.wav",
+  "assets/audio/jmill/5.wav",
 ]
 
 const voice_file_urls = await eden.uploadFiles(voice_cloning_files);
-
+console.log(voice_file_urls)
 let result2 = await eden.create("tts", {
   text: completion,
   voice: "clone",

@@ -16,14 +16,14 @@ let config = {
 let config2 = {
   interpolation_texts: [
     "An astronaut on the moon riding a horse, cartoon 1920s",
-    "A cat and a dog sitting on a couch, ",
+    "A cat and a dog sitting on a couch"
   ],
   n_frames: 6,
   stream: true,
 }
 
-//let result = await eden.create("create", config);
-let result = await eden.create("interpolate", config);
+// let result = await eden.create("create", config2);
+let result = await eden.create("interpolate", config2);
 
 console.log(result);
 
